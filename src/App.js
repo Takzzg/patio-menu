@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+import lu from './lu.jpeg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       <h1>Ah re loco</h1>
+        <img src={lu} className="App-logo" alt="logo" />
+       <h1>Holis bb</h1>
       </header>
     </div>
   );
