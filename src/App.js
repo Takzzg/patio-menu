@@ -1,15 +1,9 @@
-import lu from './lu.jpeg';
-import './App.css';
-
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={lu} className="App-logo" alt="logo" />
-       <h1>Holis bb</h1>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <h1>Holis</h1>
+        </div>
+    )
 }
 
-export default App;
+export default App
