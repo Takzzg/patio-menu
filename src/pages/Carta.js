@@ -2,9 +2,17 @@ import React from 'react'
 
 function Carta(props) {
     const { match } = props
-    console.log(match)
-    const { nombre } = match.params
-    return <div>Carta de {nombre}</div>
+    const { nombre, foto, desc, carta } = match.params
+    return (
+        <>
+            <img src={foto} alt={`Foto de ${nombre}`} />
+            <h1>{nombre}</h1>
+            <h3>{desc}</h3>
+            {/* {carta.map((plato) => (
+                <p>{carta.nombre}</p>
+            ))} */}
+        </>
+    )
 }
 
 export default Carta
