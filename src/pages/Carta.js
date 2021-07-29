@@ -5,10 +5,10 @@ function Carta(props) {
     const { nombre, foto, desc, carta } = match.params
     return (
         <>
-            {nombre}
-            {/* <img src={foto} alt={`Foto de ${nombre}`} /> */}
-            {/* <h1>{nombre}</h1>
-            <h3>{desc}</h3> */}
+            {/* {nombre} */}
+            <img src={foto} alt={`Foto de ${nombre}`} />
+            <h1>{nombre}</h1>
+            <h3>{desc}</h3>
             {/* {carta.map((plato) => (
                 <p>{carta.nombre}</p>
             ))} */}
