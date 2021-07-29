@@ -2,10 +2,9 @@ import React from 'react'
 
 function Carta(props) {
     const { match } = props
-    const { nombre, foto, desc, carta } = match.params
+    const { nombre, foto, desc } = match.params
     return (
         <>
-            {/* {nombre} */}
             <img src={foto} alt={`Foto de ${nombre}`} />
             <h1>{nombre}</h1>
             <h3>{desc}</h3>
