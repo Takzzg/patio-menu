@@ -6,8 +6,8 @@ function Carta(props) {
     return (
         <>
             <img src={foto} alt={`Foto de ${nombre}`} />
-            <h1>{nombre}</h1>
-            <h3>{desc}</h3>
+            {/* <h1>{nombre}</h1>
+            <h3>{desc}</h3> */}
             {/* {carta.map((plato) => (
                 <p>{carta.nombre}</p>
             ))} */}
