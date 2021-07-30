@@ -4,8 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dependencias
 
-- Prettier
-- React Router
+-   Prettier
+-   React Router (react-router-dom)
+-   Sass (node-sass)
 
 ## Available Scripts
 
