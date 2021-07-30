@@ -3,15 +3,18 @@ import dataCarritos from '../dataCarritos'
 
 function Carta(props) {
     const { match } = props
-    const { nombre, foto, desc } = match.params
+    const { nombre: nombreP } = match.params
+
+    const carrito = dataCarritos.find((carr) => carr.nombre === nombreP)
+    const { id, nombre, foto, desc, carta } = carrito
+
     return (
         <>
-            <img src={foto} alt={`Foto de ${nombre}`} />
-            <h1>{nombre}</h1>
-            <h3>{desc}</h3>
-            {/* {carta.map((plato) => (
-                <p>{carta.nombre}</p>
-            ))} */}
+            <p>{id}</p>
+            <p>{nombre}</p>
+            <p>{foto}</p>
+            <p>{desc}</p>
+            <pre>{JSON.stringify(carta, null, 2)}</pre>
         </>
     )
 }
