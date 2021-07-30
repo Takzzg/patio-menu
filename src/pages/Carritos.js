@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import dataCarritos from '../dataCarritos'
+import { Carrito } from '../components'
+import './Carritos.scss'
 
 function Carritos() {
     return (
-        <>
+        <div className="contenedor-carritos">
             {dataCarritos.map((carr) => (
-                <Link key={carr.nombre} to={`/carritos/${carr.nombre}`}>
-                    {carr.nombre}
+                <Link key={carr.id} to={`/carritos/${carr.nombre}`}>
+                    <Carrito carr={carr} />
                 </Link>
             ))}
-        </>
+        </div>
     )
 }
 

@@ -1,13 +1,21 @@
-import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
 
 function Navbar() {
     return (
-        <nav>
-            <Link to="/">Home</Link>
-            <Link to="/carritos">Carritos</Link>
-            <Link to="/contacto">Contacto</Link>
+        <nav className="Navbar">
+            <div className="logo-container">
+                <Link to="/">Home</Link>
+            </div>
+            <div className="links">
+                <Link to="/carritos">Carritos</Link>
+                <Link to="/contacto">Contacto</Link>
+            </div>
+
+            <div className="buscar">
+                <button className="buscar">asd</button>
+            </div>
         </nav>
     )
 }

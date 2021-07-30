@@ -1,5 +1,24 @@
-$color1: #333;
+@import '../../shared.scss';
 
-nav {
+.Navbar {
     background-color: $color1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        font-size: 3vw;
+        padding: 10px;
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    .logo-container {
+    }
+
+    .links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
 }

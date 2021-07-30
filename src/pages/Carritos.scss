@@ -1,0 +1,12 @@
+.contenedor-carritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        color: black;
+    }
+}
