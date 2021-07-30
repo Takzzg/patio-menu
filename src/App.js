@@ -5,7 +5,7 @@ import { Navbar } from './components'
 function App() {
     return (
         <Router>
-            <div className="App">
+            <div className="App" style={appStyle}>
                 <Navbar />
 
                 <Switch>
@@ -17,6 +17,11 @@ function App() {
             </div>
         </Router>
     )
+}
+
+const appStyle = {
+    padding: 0,
+    margin: 0,
 }
 
 export default App
