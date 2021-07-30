@@ -1,4 +1,5 @@
 import React from 'react'
+import dataCarritos from '../dataCarritos'
 
 function Carta(props) {
     const { match } = props

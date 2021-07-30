@@ -1,15 +1,12 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home, Carritos, Contacto, Carta } from './pages'
+import { Navbar } from './components'
 
 function App() {
     return (
         <Router>
             <div className="App">
-                <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/carritos">Carritos</Link>
-                    <Link to="/contacto">Contacto</Link>
-                </nav>
+                <Navbar />
 
                 <Switch>
                     <Route exact path="/" component={Home} />
@@ -23,5 +20,3 @@ function App() {
 }
 
 export default App
-
-// fnAEPRKPMtAAQ__Fn2iGSCLqDWiw1tcnL8_beGO_
