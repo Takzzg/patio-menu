@@ -2,7 +2,7 @@ import React from 'react'
 import './Plato.scss'
 
 function Plato(props) {
-    const { nombre, foto, desc, precio } = props.plato
+    const { nombre, foto } = props.plato
     return (
         <div className="contenedor">
             {nombre}
