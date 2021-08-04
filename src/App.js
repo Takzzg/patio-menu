@@ -3,6 +3,8 @@ import { Home, Carritos, Contacto, Carta } from './pages'
 import { Navbar } from './components'
 import './App.scss'
 
+// asd
+
 function App() {
     return (
         <Router>
