@@ -1,0 +1,18 @@
+.banner {
+    color: white;
+    background-position: center;
+    background-size: cover;
+    font-size: 20px;
+
+    .overlay {
+        padding: 30px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nombre {
+        font-size: 40px;
+    }
+}

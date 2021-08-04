@@ -1,9 +1,15 @@
 import React from 'react'
+import './Category.scss'
 
-function Category({ nombre, children }) {
+function Category(props) {
+    const { nombre, children } = props
     return (
-        <div>
-            <p>{nombre}</p>
+        <div className="category">
+            <div className="header">
+                <hr />
+                <>{nombre.toUpperCase()}</>
+                <hr />
+            </div>
             {children}
         </div>
     )

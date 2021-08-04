@@ -8,9 +8,9 @@ function Carrito(props) {
         <div className="carrito">
             <img src={foto} alt={`foto de ${nombre}`} />
             <div className="grid">
-                {nombre}
-                {desc}
-                <NavigateNextIcon />
+                <div className="nombre">{nombre}</div>
+                <div className="desc">{desc}</div>
+                <NavigateNextIcon className="icon" />
             </div>
         </div>
     )
