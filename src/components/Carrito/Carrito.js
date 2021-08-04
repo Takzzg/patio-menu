@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import './Carrito.scss'
 
 function Carrito(props) {
@@ -6,8 +7,11 @@ function Carrito(props) {
     return (
         <div className="carrito">
             <img src={foto} alt={`foto de ${nombre}`} />
-            <h1>{nombre}</h1>
-            <h3>{desc}</h3>
+            <div className="grid">
+                {nombre}
+                {desc}
+                <NavigateNextIcon />
+            </div>
         </div>
     )
 }
