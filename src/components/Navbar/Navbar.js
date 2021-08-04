@@ -4,17 +4,8 @@ import './Navbar.scss'
 function Navbar() {
     return (
         <nav className="Navbar">
-            <div className="logo-container">
-                <Link to="/">Home</Link>
-            </div>
-            <div className="links">
-                <Link to="/carritos">Carritos</Link>
-                <Link to="/contacto">Contacto</Link>
-            </div>
-
-            <div className="buscar">
-                <button className="buscar">asd</button>
-            </div>
+            <Link to="/">Home</Link>
+            <Link to="/carritos">Carritos</Link>
         </nav>
     )
 }
