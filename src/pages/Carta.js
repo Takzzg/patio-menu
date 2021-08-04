@@ -21,7 +21,6 @@ function Carta(props) {
                     </Category>
                 ))}
             </>
-            <pre>{JSON.stringify(carta, null, 2)}</pre>
         </div>
     )
 }
