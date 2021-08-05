@@ -13,10 +13,10 @@
         width: 100%;
     }
 
-    .nombre,
-    .desc,
-    .precio {
-        padding: 10px;
+    .infoContainer {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
     }
 
     .nombre {
