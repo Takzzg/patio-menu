@@ -7,8 +7,8 @@ function Banner(props) {
 
     return (
         <div className="banner">
-            <BgImage foto={foto}>
-                <div className="overlay">
+            <BgImage foto={foto} overlay>
+                <div className="infoContainer">
                     <div className="nombre">{nombre}</div>
                     <div className="desc">{desc}</div>
                 </div>

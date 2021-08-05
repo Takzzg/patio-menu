@@ -1,11 +1,12 @@
 import React from 'react'
+import { Overlay } from '../index'
 import './BgImage.scss'
 
 function BgImage(props) {
-    const { foto, children } = props
+    const { foto, children, overlay } = props
     return (
         <div className="bgImage" style={{ backgroundImage: `url(${foto})` }}>
-            {children}
+            {overlay ? <Overlay>{children}</Overlay> : children}
         </div>
     )
 }

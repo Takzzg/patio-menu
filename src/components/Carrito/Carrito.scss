@@ -1,31 +1,21 @@
 .carrito {
-    display: flex;
-    flex-direction: column;
-    max-width: 40vw;
+    width: 90vw;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.4);
 
-    img {
-        width: 100%;
-    }
-
     .grid {
+        padding: 20px;
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: center;
-        // justify-content: center;
-        width: 100%;
-
-        .nombre,
-        .desc {
-            justify-self: center;
-        }
+        color: white;
+        justify-items: center;
 
         .nombre {
             font-weight: bold;
-            font-size: 35px;
+            font-size: 4vw;
         }
 
         .desc {
