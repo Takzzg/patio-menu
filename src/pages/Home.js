@@ -1,10 +1,17 @@
 import React from 'react'
+import { MainTitle, SubTitle } from '../components'
 import './Home.scss'
 
 function Home() {
     return (
         <div className="home">
-            <div className="mapTitle">¿ Donde Encontrarnos ?</div>
+            <MainTitle text="Seguinos en nuestras redes sociales" />
+            inta: asd <br />
+            face: asd <br />
+            <SubTitle text="O Contactate con nosotros por WhatsApp:" />
+            whats: asd
+            <MainTitle text="¿ Donde Encontrarnos ?" />
+            <SubTitle text="Podes encontrarnos en: Av. del Sol 1080 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
             <iframe
                 title="map"
                 className="map"
