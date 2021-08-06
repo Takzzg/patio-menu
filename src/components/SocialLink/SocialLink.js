@@ -10,7 +10,7 @@ function SocialLink(props) {
         <div className="socialLink">
             {insta ? (
                 <a
-                    href="https://www.instagram.com/elpatiodemerlo/"
+                    href="instagram://user?username=elpatiodemerlo"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -23,7 +23,7 @@ function SocialLink(props) {
             ) : null}
             {face ? (
                 <a
-                    href="https://www.facebook.com/ElPatioMerlo"
+                    href="intent://page/270007350371623?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ background: `#3b5998`, color: 'white' }}
