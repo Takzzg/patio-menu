@@ -1,15 +1,15 @@
 import React from 'react'
-import { MainTitle, SubTitle } from '../components'
+import { MainTitle, SubTitle, SocialLink } from '../components'
 import './Home.scss'
 
 function Home() {
     return (
         <div className="home">
             <MainTitle text="Seguinos en nuestras redes sociales" />
-            inta: asd <br />
-            face: asd <br />
+            <SocialLink insta />
+            <SocialLink face />
             <SubTitle text="O Contactate con nosotros por WhatsApp:" />
-            whats: asd
+            <SocialLink wapp />
             <MainTitle text="¿ Donde Encontrarnos ?" />
             <SubTitle text="Podes encontrarnos en: Av. del Sol 1080 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
             <iframe
