@@ -34,7 +34,7 @@ function SocialLink(props) {
             ) : null}
             {wapp ? (
                 <a
-                    href="https://wa.me/5492664507652"
+                    href="whatsapp://send?phone=5492664507652"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ background: `#25D366`, color: 'white' }}
