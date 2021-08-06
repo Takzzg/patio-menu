@@ -21,6 +21,7 @@ function SocialLink(props) {
                     <div className="nombre">@elpatiodemerlo</div>
                 </a>
             ) : null}
+
             {face ? (
                 <a
                     href="intent://page/270007350371623?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
@@ -32,6 +33,7 @@ function SocialLink(props) {
                     <div className="nombre">El Patio - Food & Beer Trucks</div>
                 </a>
             ) : null}
+
             {wapp ? (
                 <a
                     href="whatsapp://send?phone=5492664507652"

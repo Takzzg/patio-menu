@@ -11,7 +11,7 @@ function Home() {
             <SubTitle text="O Contactate con nosotros por WhatsApp:" />
             <SocialLink wapp />
             <MainTitle text="¿ Donde Encontrarnos ?" />
-            <SubTitle text="Podes encontrarnos en: Av. del Sol 1080 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
+            <SubTitle text="Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
             <iframe
                 title="map"
                 className="map"
