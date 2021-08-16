@@ -6,7 +6,7 @@ function BgOverlay(props) {
     let overlayColor = 'rgba(117, 71, 1, 0.45)'
     return (
         <div
-            className="bgImage"
+            className="bgOverlay"
             style={{ backgroundImage: 'url(../images/bg/bg1.jpg)' }}
         >
             <div
