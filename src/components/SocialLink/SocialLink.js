@@ -5,12 +5,12 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp'
 import './SocialLink.scss'
 
 function SocialLink(props) {
-    const { insta, face, wapp } = props
+    const { insta, face, wapp, link } = props
     return (
         <div className="socialLink">
             {insta ? (
                 <a
-                    href="instagram://user?username=elpatiodemerlo"
+                    href={`instagram://user?username=${link}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -18,31 +18,28 @@ function SocialLink(props) {
                     }}
                 >
                     <InstagramIcon fontSize="inherit" />
-                    <div className="nombre">@elpatiodemerlo</div>
                 </a>
             ) : null}
 
             {face ? (
                 <a
-                    href="intent://page/270007350371623?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
+                    href={`fb://profile/${link}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ background: `#3b5998`, color: 'white' }}
                 >
                     <FacebookIcon fontSize="inherit" />
-                    <div className="nombre">El Patio - Food & Beer Trucks</div>
                 </a>
             ) : null}
 
             {wapp ? (
                 <a
-                    href="whatsapp://send?phone=5492664507652"
+                    href={`whatsapp://send?phone=${link}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ background: `#25D366`, color: 'white' }}
                 >
                     <WhatsAppIcon fontSize="inherit" />
-                    <div className="nombre">+549 266 450-7652</div>
                 </a>
             ) : null}
         </div>

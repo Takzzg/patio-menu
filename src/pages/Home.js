@@ -1,15 +1,29 @@
 import React from 'react'
-import { MainTitle, SubTitle, SocialLink } from '../components'
+import { MainTitle, SubTitle, SocialContainer, Banner } from '../components'
+import dataPatio from '../dataPatio'
 import './Home.scss'
 
 function Home() {
     return (
         <div className="home">
+            <Banner
+                foto={'../images/patio/portada1.jpg'}
+                nombre="El Patio"
+                desc="Food & Beer Trucks"
+            />
+            <p>
+                Veni a visitar el patio de Merlo, sobre Av. del Sol, y disfruta
+                de un espacio al aire libre donde podes encontrar variedad de
+                comidas, con opciones veganas, vegetarianas y apto celiaco.
+                Ademas somos pet-friendly
+            </p>
+            <p>Insertar galeria aqui</p>
             <MainTitle text="Seguinos en nuestras redes sociales" />
-            <SocialLink insta />
-            <SocialLink face />
-            <SubTitle text="O Contactate con nosotros por WhatsApp:" />
-            <SocialLink wapp />
+            <SocialContainer
+                userInsta={dataPatio.userInsta}
+                idFace={dataPatio.idFace}
+                numWpp={dataPatio.numWpp}
+            />
             <MainTitle text="¿ Donde Encontrarnos ?" />
             <SubTitle text="Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
             <iframe

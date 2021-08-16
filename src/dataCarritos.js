@@ -1,11 +1,46 @@
 const stockPhoto = '../images/carrito1.jpg'
 
+const saporiDiFamigliaFotos = {
+    logo: '../images/SaporiDiFamiglia/logo.jpeg',
+    raviolones1: '../images/SaporiDiFamiglia/raviolones1.jpeg',
+    raviolones2: '../images/SaporiDiFamiglia/raviolones2.jpeg',
+    sorrentinos1: '../images/SaporiDiFamiglia/sorrentinos1.jpeg',
+    sorrentinos2: '../images/SaporiDiFamiglia/sorrentinos2.jpeg',
+    sorrentinos3: '../images/SaporiDiFamiglia/sorrentinos3.jpeg',
+    sorrentinos4: '../images/SaporiDiFamiglia/sorrentinos4.jpeg',
+    tallarines: '../images/SaporiDiFamiglia/tallarines.jpeg',
+    ñoquisTricolor: '../images/SaporiDiFamiglia/ñoquisTricolor.jpeg',
+}
+const elBululu = {
+    arepas1: '../images/ElBululu/arepas1.jpeg',
+    arepas2: '../images/ElBululu/arepas2.jpeg',
+    arepas3: '../images/ElBululu/arepas3.jpeg',
+    tequeños1: '../images/ElBululu/tequeños1.jpeg',
+    tequeños2: '../images/ElBululu/tequeños2.jpeg',
+}
+const poppi = {
+    empanadas1: '../images/Poppi/empanadas1.jpeg',
+    pizza1: '../images/Poppi/pizza1.jpeg',
+    pizza2: '../images/Poppi/pizza2.jpeg',
+    pizza3: '../images/Poppi/pizza3.jpeg',
+}
+
+const gaseosas = '../images/bebidas/lineaCoca.jpg'
+const descGaseosas = 'Gaseosas 500ml linea Coca-Cola. Consultar disponibilidad'
+const aguaMineral = '../images/bebidas/aguaMineral.jpg'
+const descAgua = 'Agua mineral 500ml. Consultar disponibilidad'
+const vino = '../images/bebidas/vino.png'
+const descVino = 'Consultar variedades'
+
 const dataCarritos = [
     {
         id: 0,
         nombre: 'Sativa',
         foto: stockPhoto,
         desc: `descripcion Sativa`,
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             principales: [
                 {
@@ -69,6 +104,9 @@ const dataCarritos = [
         nombre: 'Garinger',
         foto: stockPhoto,
         desc: 'Descripcion Garinger',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             cervezas: [
                 {
@@ -100,6 +138,9 @@ const dataCarritos = [
         nombre: 'Station',
         foto: stockPhoto,
         desc: 'Descripcion Station',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             principales: [
                 {
@@ -161,29 +202,96 @@ const dataCarritos = [
     {
         id: 3,
         nombre: 'Sapore Di Famiglia',
-        foto: stockPhoto,
+        foto: saporiDiFamigliaFotos.logo,
         desc: 'Descripcion Sapore Di Famiglia',
+        userInsta: '_saporidifamiglia_',
+        idFace: '',
+        numWpp: [5492664020989, 5492664173795],
         carta: {
-            pastas: [
+            sorrentinos: [
                 {
                     id: 0,
-                    nombre: 'Pasta 1',
-                    foto: stockPhoto,
-                    desc: 'Descripcion pasta 1',
+                    nombre: 'Muzarella y jamon',
+                    foto: saporiDiFamigliaFotos.sorrentinos1,
+                    desc: 'Sorrentinos de Muzarella y jamon',
                     precio: '$$$$',
                 },
                 {
                     id: 1,
-                    nombre: 'Pasta 2',
-                    foto: stockPhoto,
-                    desc: 'Descripcion pasta 2',
+                    nombre: 'Muzarella, tomate y albahaca',
+                    foto: saporiDiFamigliaFotos.sorrentinos2,
+                    desc: 'Sorrentinos de Muzarella, tomate y albahaca',
                     precio: '$$$$',
                 },
                 {
                     id: 2,
-                    nombre: 'Pasta 3',
-                    foto: stockPhoto,
-                    desc: 'Descripcion pasta 3',
+                    nombre: 'Muzarella y cantimpalo',
+                    foto: saporiDiFamigliaFotos.sorrentinos3,
+                    desc: 'Sorrentinos de Muzarella y cantimpalo',
+                    precio: '$$$$',
+                },
+                {
+                    id: 3,
+                    nombre: 'Muzarella, rucula y jamon crudo',
+                    foto: saporiDiFamigliaFotos.sorrentinos4,
+                    desc: 'Sorrentinos de Muzarella, rucula y jamon crudo',
+                    precio: '$$$$',
+                },
+            ],
+            raviolones: [
+                {
+                    id: 0,
+                    nombre: 'Muzarella, verdeo y jamon crudo',
+                    foto: saporiDiFamigliaFotos.raviolones1,
+                    desc: 'Raviolones de Muzarella, verdeo y jamon crudo',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Cuatro quesos',
+                    foto: saporiDiFamigliaFotos.raviolones2,
+                    desc: 'Raviolones de Cuatro quesos',
+                    precio: '$$$$',
+                },
+            ],
+            ñoquis: [
+                {
+                    id: 0,
+                    nombre: 'De papa',
+                    foto: saporiDiFamigliaFotos.ñoquisTricolor,
+                    desc: 'Ñoquis de papa',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Tricolor',
+                    foto: saporiDiFamigliaFotos.ñoquisTricolor,
+                    desc: 'Ñoquis tricolor',
+                    precio: '$$$$',
+                },
+            ],
+            tallarines: [
+                {
+                    id: 0,
+                    nombre: 'Tallarines',
+                    foto: saporiDiFamigliaFotos.tallarines,
+                    desc: 'Tallarines',
+                    precio: '$$$$',
+                },
+            ],
+            salsas: [
+                {
+                    id: 0,
+                    nombre: 'Salsa 1',
+                    foto: saporiDiFamigliaFotos.sorrentinos1,
+                    desc: 'Descripcion salsa 1',
+                    precio: '$$$$',
+                },
+                {
+                    id: 0,
+                    nombre: 'Salsa 2',
+                    foto: saporiDiFamigliaFotos.sorrentinos2,
+                    desc: 'Descripcion salsa 2',
                     precio: '$$$$',
                 },
             ],
@@ -191,22 +299,22 @@ const dataCarritos = [
                 {
                     id: 0,
                     nombre: 'Gaseosa',
-                    foto: stockPhoto,
-                    desc: 'Linea Pepsi',
+                    foto: gaseosas,
+                    desc: descGaseosas,
                     precio: '$$$$',
                 },
                 {
                     id: 1,
                     nombre: 'Agua Mineral',
-                    foto: stockPhoto,
-                    desc: 'Linea Pepsi',
+                    foto: aguaMineral,
+                    desc: descAgua,
                     precio: '$$$$',
                 },
                 {
                     id: 2,
                     nombre: 'Vino 1',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Vino 1',
+                    foto: vino,
+                    desc: descVino,
                     precio: '$$$$',
                 },
             ],
@@ -217,6 +325,9 @@ const dataCarritos = [
         nombre: 'Berraco',
         foto: stockPhoto,
         desc: 'Descripcion Berraco',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             sandwiches: [
                 {
@@ -273,6 +384,9 @@ const dataCarritos = [
         nombre: 'Buena Faena',
         foto: stockPhoto,
         desc: 'Descripcion Buena Faena',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             hamburguesas: [
                 {
@@ -321,6 +435,9 @@ const dataCarritos = [
         nombre: 'Chunkana',
         foto: stockPhoto,
         desc: 'Descripcion chunkana',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             cerveza: [
                 {
@@ -352,27 +469,37 @@ const dataCarritos = [
         nombre: 'El Bululu',
         foto: stockPhoto,
         desc: 'Descripcion el bululu',
+        userInsta: 'elbululu.ve',
+        idFace: '',
+        numWpp: [5492664848269, 5491154579188],
         carta: {
             arepas: [
                 {
                     id: 0,
-                    nombre: 'Arepa 1',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Arepa 1',
+                    nombre: 'Mechada',
+                    foto: elBululu.arepas1,
+                    desc: 'Arepa hecha con harina de maíz sin TACC, con relleno de carne desmenuzada con queso',
                     precio: '$$$$$$',
                 },
                 {
                     id: 1,
-                    nombre: 'Arepa 2',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Arepa 2',
+                    nombre: 'Reina pepiada',
+                    foto: elBululu.arepas2,
+                    desc: 'Arepa hecha con harina de maíz sin TACC, con relleno de pollo desmenuzado con aderezo de palta y queso',
                     precio: '$$$$$$',
                 },
                 {
                     id: 2,
-                    nombre: 'Arepa 3',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Arepa 3',
+                    nombre: 'Pollo al Grill',
+                    foto: elBululu.arepas3,
+                    desc: 'Arepa hecha con harina de maíz sin TACC, con relleno de pollo a la plancha con jamón y queso',
+                    precio: '$$$$$$',
+                },
+                {
+                    id: 3,
+                    nombre: 'Veggie',
+                    foto: elBululu.arepas1,
+                    desc: 'Arepa hecha con harina de maíz sin TACC, con relleno de vegetales salteados y queso',
                     precio: '$$$$$$',
                 },
             ],
@@ -380,15 +507,15 @@ const dataCarritos = [
                 {
                     id: 0,
                     nombre: 'Queso',
-                    foto: stockPhoto,
-                    desc: 'Descripcion queso',
+                    foto: elBululu.tequeños1,
+                    desc: 'deditos de queso blanco envueltos en harina de trigo',
                     precio: '$$$$$$',
                 },
                 {
                     id: 1,
                     nombre: 'Chocolate',
-                    foto: stockPhoto,
-                    desc: 'Descripcion chocolate',
+                    foto: elBululu.tequeños2,
+                    desc: 'deditos de chocolate envueltos en harina de trigo',
                     precio: '$$$$$$',
                 },
             ],
@@ -396,15 +523,15 @@ const dataCarritos = [
                 {
                     id: 0,
                     nombre: 'Gaseosa',
-                    foto: stockPhoto,
-                    desc: 'Linea Pepsi',
+                    foto: gaseosas,
+                    desc: descGaseosas,
                     precio: '$$$$',
                 },
                 {
                     id: 1,
                     nombre: 'Agua Mineral',
-                    foto: stockPhoto,
-                    desc: 'Linea Pepsi',
+                    foto: aguaMineral,
+                    desc: descAgua,
                     precio: '$$$$',
                 },
             ],
@@ -415,6 +542,9 @@ const dataCarritos = [
         nombre: 'La Patrona',
         foto: stockPhoto,
         desc: 'Descripcion la patrona',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             tacos: [
                 {
@@ -471,36 +601,116 @@ const dataCarritos = [
         nombre: 'Poppi',
         foto: stockPhoto,
         desc: 'Descripcion poppi',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             pizzas: [
                 {
                     id: 0,
-                    nombre: 'Pizza 1',
-                    foto: stockPhoto,
-                    desc: 'Descripcion pizza 1',
+                    nombre: 'Napolitana',
+                    foto: poppi.pizza1,
+                    desc: 'Pizza de napolitana',
                     precio: '$$$$',
                 },
                 {
                     id: 1,
-                    nombre: 'Pizza 2',
-                    foto: stockPhoto,
-                    desc: 'Descripcion pizza 2',
+                    nombre: 'Roquefort',
+                    foto: poppi.pizza2,
+                    desc: 'Pizza de roquefort',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Anchoas',
+                    foto: poppi.pizza3,
+                    desc: 'Pizza de anchoas',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Huevo',
+                    foto: poppi.pizza1,
+                    desc: 'Pizza de huevo',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Jamon y morron',
+                    foto: poppi.pizza2,
+                    desc: 'Pizza de Jamon y morron',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Vegetales',
+                    foto: poppi.pizza3,
+                    desc: 'Pizza de Vegetales',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Rúcula',
+                    foto: poppi.pizza1,
+                    desc: 'Pizza de Rúcula',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Champiñones',
+                    foto: poppi.pizza2,
+                    desc: 'Pizza de Champiñones',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Calabresa',
+                    foto: poppi.pizza3,
+                    desc: 'Pizza de Calabresa',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Palmitos',
+                    foto: poppi.pizza1,
+                    desc: 'Pizza de Palmitos',
                     precio: '$$$$',
                 },
             ],
             empanadas: [
                 {
                     id: 0,
-                    nombre: 'Empanada 1',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Empanada 1',
+                    nombre: 'Carne',
+                    foto: poppi.empanadas1,
+                    desc: 'Descripcion Carne',
                     precio: '$$$$',
                 },
                 {
                     id: 1,
-                    nombre: 'Empanada 2',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Empanada 2',
+                    nombre: 'Pollo',
+                    foto: poppi.empanadas1,
+                    desc: 'Descripcion Pollo',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Capresse',
+                    foto: poppi.empanadas1,
+                    desc: 'Descripcion Capresse',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Jamón y queso',
+                    foto: poppi.empanadas1,
+                    desc: 'Descripcion Jamón y queso',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Vegetales',
+                    foto: poppi.empanadas1,
+                    desc: 'Descripcion Vegetales',
                     precio: '$$$$',
                 },
             ],
@@ -520,35 +730,49 @@ const dataCarritos = [
                     precio: '$$$$',
                 },
             ],
-            postres: [
-                {
-                    id: 0,
-                    nombre: 'Postre 1',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Postre 1',
-                    precio: '$$$$',
-                },
-                {
-                    id: 1,
-                    nombre: 'Postre 2',
-                    foto: stockPhoto,
-                    desc: 'Descripcion Postre 2',
-                    precio: '$$$$',
-                },
-            ],
             papas: [
                 {
                     id: 0,
                     nombre: 'Papas 1',
                     foto: stockPhoto,
-                    desc: 'Descripcion papas 1',
+                    desc: 'Descripcion Papas 1',
                     precio: '$$$$',
                 },
                 {
                     id: 1,
                     nombre: 'Papas 2',
                     foto: stockPhoto,
-                    desc: 'Descripcion papas 2',
+                    desc: 'Descripcion Papas 2',
+                    precio: '$$$$',
+                },
+            ],
+            postres: [
+                {
+                    id: 0,
+                    nombre: 'Tiramisu',
+                    foto: stockPhoto,
+                    desc: 'Descripcion Tiramisu',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Chocotorta',
+                    foto: stockPhoto,
+                    desc: 'Descripcion Chocotorta',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Cheesecake',
+                    foto: stockPhoto,
+                    desc: 'Descripcion Cheesecake',
+                    precio: '$$$$',
+                },
+                {
+                    id: 1,
+                    nombre: 'Flan casero',
+                    foto: stockPhoto,
+                    desc: 'Descripcion Flan casero',
                     precio: '$$$$',
                 },
             ],
@@ -575,6 +799,9 @@ const dataCarritos = [
         nombre: 'Dulzuras Detuti',
         foto: stockPhoto,
         desc: 'Descripcion dulzuras detuti',
+        userInsta: '',
+        idFace: '',
+        numWpp: '',
         carta: {
             garrapiñadas: [
                 {

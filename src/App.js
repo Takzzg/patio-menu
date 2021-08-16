@@ -6,7 +6,7 @@ import {
     useLocation,
 } from 'react-router-dom'
 import { Home, Carritos, Carta } from './pages'
-import { Navbar } from './components'
+import { Navbar, BgOverlay } from './components'
 import './App.scss'
 
 function ScrollToTop() {
@@ -22,12 +22,14 @@ function App() {
         <Router>
             <ScrollToTop />
             <div className="App">
-                <Navbar />
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/carritos" component={Carritos} />
-                    <Route path="/carritos/:nombre" component={Carta} />
-                </Switch>
+                <BgOverlay>
+                    <Navbar />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/carritos" component={Carritos} />
+                        <Route path="/carritos/:nombre" component={Carta} />
+                    </Switch>
+                </BgOverlay>
             </div>
         </Router>
     )
