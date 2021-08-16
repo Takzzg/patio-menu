@@ -1,5 +1,5 @@
 import React from 'react'
-import './MainTitle.scss'
+import './MainTitle.sass'
 
 function MainTitle(props) {
     const { text } = props

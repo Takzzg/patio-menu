@@ -1,6 +1,6 @@
 import React from 'react'
 import { Overlay } from '../index'
-import './BgImage.scss'
+import './BgImage.sass'
 
 function BgImage(props) {
     const { foto, children, overlay } = props

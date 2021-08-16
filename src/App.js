@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 import { Home, Carritos, Carta } from './pages'
 import { Navbar, BgOverlay } from './components'
-import './App.scss'
+import './App.sass'
 
 function ScrollToTop() {
     const { pathname } = useLocation()

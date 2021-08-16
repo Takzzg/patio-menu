@@ -1,7 +1,7 @@
 import React from 'react'
 import { MainTitle, SubTitle, SocialContainer, Banner } from '../components'
 import dataPatio from '../dataPatio'
-import './Home.scss'
+import './Home.sass'
 
 function Home() {
     return (

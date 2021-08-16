@@ -1,7 +1,7 @@
 import React from 'react'
 import { BgImage } from '../index'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-import './Carrito.scss'
+import './Carrito.sass'
 
 function Carrito(props) {
     const { nombre, foto, desc } = props.carr

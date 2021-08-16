@@ -1,6 +1,6 @@
 import React from 'react'
 import { BgImage } from '../index'
-import './Plato.scss'
+import './Plato.sass'
 
 function Plato(props) {
     const { nombre, foto, desc, precio } = props.plato

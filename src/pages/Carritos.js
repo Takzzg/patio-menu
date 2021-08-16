@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import dataCarritos from '../dataCarritos'
 import { Carrito } from '../components'
-import './Carritos.scss'
+import './Carritos.sass'
 
 function Carritos() {
     return (

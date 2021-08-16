@@ -1,5 +1,5 @@
 import React from 'react'
-import './Overlay.scss'
+import './Overlay.sass'
 
 function Overlay(props) {
     const { children } = props

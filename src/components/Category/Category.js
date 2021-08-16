@@ -1,5 +1,5 @@
 import React from 'react'
-import './Category.scss'
+import './Category.sass'
 
 function Category(props) {
     const { nombre, children } = props
