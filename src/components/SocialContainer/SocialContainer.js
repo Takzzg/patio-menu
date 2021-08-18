@@ -5,7 +5,10 @@ import './SocialContainer.sass'
 function SocialContainer(props) {
     const { userInsta, idFace, numWpp } = props
     return (
-        <div className="socialContainer">
+        <div
+            className="socialContainer"
+            style={{ backgroundImage: 'url(../images/wppBg.jpg)' }}
+        >
             {userInsta ? <SocialLink insta link={userInsta} /> : null}
             {idFace ? <SocialLink face link={idFace} /> : null}
             {numWpp

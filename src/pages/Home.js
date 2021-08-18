@@ -1,5 +1,11 @@
 import React from 'react'
-import { MainTitle, SubTitle, SocialContainer, Banner } from '../components'
+import {
+    MainTitle,
+    SubTitle,
+    SocialContainer,
+    Banner,
+    Category,
+} from '../components'
 import dataPatio from '../dataPatio'
 import './Home.sass'
 
@@ -16,7 +22,7 @@ function Home() {
                 lugar!
             </MainTitle>
             <SubTitle>
-                <h4>El Patio te ofrece:</h4>
+                <Category nombre="El Patio te ofrece" />
                 <ul>
                     <li>
                         Variedad de comidas, que te trasladan a diferentes
@@ -39,7 +45,7 @@ function Home() {
                 mascotas!
             </SubTitle>
             <p>Insertar galeria aqui</p>
-            {/* <MainTitle text="Seguinos en nuestras redes sociales" /> */}
+            <MainTitle text="Seguinos en nuestras redes sociales" />
             <SocialContainer
                 userInsta={dataPatio.userInsta}
                 idFace={dataPatio.idFace}

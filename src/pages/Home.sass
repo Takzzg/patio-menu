@@ -1,3 +1,5 @@
+@import '../shared.sass'
+
 .home
     .map
         width: 100%
@@ -9,6 +11,15 @@
     ul
         padding: 0
         margin: 0
+        list-style: none
 
         li
             margin: 20px
+
+            &::before
+                content: '\2022'
+                color: $secondaryVariant
+                font-weight: bold
+                display: inline-block
+                width: 1em
+                margin-left: -1em
