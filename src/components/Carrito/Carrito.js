@@ -10,11 +10,10 @@ function Carrito(props) {
             <BgImage foto={foto} overlay>
                 <div className="grid">
                     <div className="nombre">{nombre}</div>
-                    <div className="desc">{desc}</div>
                     <NavigateNextIcon className="icon" />
+                    <div className="desc">{desc}</div>
                 </div>
             </BgImage>
-            {/* <img src={foto} alt={`foto de ${nombre}`} /> */}
         </div>
     )
 }

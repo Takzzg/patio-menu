@@ -11,14 +11,35 @@ function Home() {
                 nombre="El Patio"
                 desc="Food & Beer Trucks"
             />
-            <p>
-                Veni a visitar el patio de Merlo, sobre Av. del Sol, y disfruta
-                de un espacio al aire libre donde podes encontrar variedad de
-                comidas, con opciones veganas, vegetarianas y apto celiaco.
-                Ademas somos pet-friendly
-            </p>
+            <MainTitle>
+                Vení a visitar los mejores Food Trucks de Merlo, en un sólo
+                lugar!
+            </MainTitle>
+            <SubTitle>
+                <h4>El Patio te ofrece:</h4>
+                <ul>
+                    <li>
+                        Variedad de comidas, que te trasladan a diferentes
+                        culturas gastronómicas como la Venezolana, Mexicana,
+                        Italiana, etc... <br />
+                        Con opciones veganas, vegetarianas y apto celíaco.
+                    </li>
+                    <li>
+                        Los mejores tragos y cervezas artesanales elaboradas
+                        localmente por nuestros feriantes.
+                    </li>
+                    <li>
+                        Y los mas deliciosos postres caseros para que tengas una
+                        experiencia completa y no te quedes con las ganas!
+                    </li>
+                </ul>
+                El espacio cuenta con la mejor iluminación y musicalización,
+                además de la buena onda de los feriantes para que disfrutes de
+                un momento al aire libre con tu familia, amigos y hasta tus
+                mascotas!
+            </SubTitle>
             <p>Insertar galeria aqui</p>
-            <MainTitle text="Seguinos en nuestras redes sociales" />
+            {/* <MainTitle text="Seguinos en nuestras redes sociales" /> */}
             <SocialContainer
                 userInsta={dataPatio.userInsta}
                 idFace={dataPatio.idFace}
@@ -26,6 +47,11 @@ function Home() {
             />
             <MainTitle text="¿ Donde Encontrarnos ?" />
             <SubTitle text="Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
+            {/* <SocialContainer
+                userInsta={dataPatio.userInsta}
+                idFace={dataPatio.idFace}
+                numWpp={dataPatio.numWpp}
+            /> */}
             <iframe
                 title="map"
                 className="map"

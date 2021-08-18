@@ -1,5 +1,8 @@
+@import '../../shared.sass'
+
 .category
     padding: 10px 0
+    width: 100%
 
     .header
         display: grid
@@ -9,10 +12,13 @@
         justify-content: center
         padding: 5px 0
         font-size: 30px
+        color: $lightTextBright
 
         hr
             margin: 0
-            color: rgba($color: #333, $alpha: 0.5)
+            height: 2px
+            background-color: rgba($secondaryVariant, 0.95)
+            border: none
 
     .children
         padding: 0 20px

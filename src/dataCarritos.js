@@ -101,6 +101,7 @@ const dataCarritos = [
     },
     {
         id: 1,
+        cerveceria: true,
         nombre: 'Garinger',
         foto: stockPhoto,
         desc: 'Descripcion Garinger',
@@ -432,6 +433,7 @@ const dataCarritos = [
     },
     {
         id: 6,
+        cerveceria: true,
         nombre: 'Chunkana',
         foto: stockPhoto,
         desc: 'Descripcion chunkana',
