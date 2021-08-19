@@ -5,21 +5,12 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp'
 import './SocialLink.sass'
 
 function SocialLink(props) {
-    const { insta, face, wapp, link } = props
+    const { insta, face, wapp, link, tripAd } = props
     return (
         <div className="socialLink">
             {insta ? (
-                // <a
-                //     href={`instagram://user?username=${link}`}
-                //     target="_blank"
-                //     rel="noopener noreferrer"
-                //     style={{
-                //         background: `radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)`,
-                //     }}
-                // >
-                //     <InstagramIcon fontSize="inherit" />
-                // </a>
                 <a
+                    className="icon"
                     href={`instagram://user?username=${link}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -30,10 +21,10 @@ function SocialLink(props) {
 
             {face ? (
                 <a
+                    className="icon"
                     href={`fb://profile/${link}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    // style={{ background: `#3b5998`, color: 'white' }}
                 >
                     <FacebookIcon fontSize="inherit" className="icono" />
                 </a>
@@ -41,12 +32,27 @@ function SocialLink(props) {
 
             {wapp ? (
                 <a
+                    className="icon"
                     href={`whatsapp://send?phone=${link}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    // style={{ background: `#25D366`, color: 'white' }}
                 >
                     <WhatsAppIcon fontSize="inherit" className="icono" />
+                </a>
+            ) : null}
+
+            {tripAd ? (
+                <a
+                    className="tripad"
+                    href="https://www.tripadvisor.com.ar/Restaurant_Review-g23230296-d23594097-Reviews-El_Patio_Food_Beer_Trucks-Villa_De_Merlo_Province_of_San_Luis_Cuyo.html?m=19905"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="../images/talwhite.png"
+                        alt="logo trip advisor"
+                        className="logo"
+                    />
                 </a>
             ) : null}
         </div>

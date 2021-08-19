@@ -50,6 +50,7 @@ function Home() {
                 userInsta={dataPatio.userInsta}
                 idFace={dataPatio.idFace}
                 numWpp={dataPatio.numWpp}
+                tripAd
             />
             <MainTitle text="¿ Donde Encontrarnos ?" />
             <SubTitle text="Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos Pellegrini), Merlo, San Luis." />

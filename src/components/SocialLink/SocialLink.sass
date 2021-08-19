@@ -8,15 +8,22 @@
     box-shadow: $boxShadow
 
     a
-        border-radius: 50%
         display: flex
         background-color: $secondaryVariant
         text-decoration: none
         padding: 10px
 
-    .nombre
-        font-size: 4vw
+        &.icon
+            border-radius: 50%
 
-    .icono
-        color: $lightTextBright
-        font-size: 30px
+        &.tripad
+            padding: 5px 10px
+            border-radius: 30px
+            width: 40vw
+
+            .logo
+                width: 100%
+
+        .icono
+            color: white
+            font-size: 7vw
