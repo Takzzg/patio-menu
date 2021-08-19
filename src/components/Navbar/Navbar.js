@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import SearchIcon from '@material-ui/icons/Search'
 import { useEffect } from 'react'
 import './Navbar.sass'
 
@@ -35,6 +36,7 @@ function Navbar() {
             <Link onClick={updateButton} className="navbar-link" to="/carritos">
                 Carritos
             </Link>
+            <SearchIcon className="search" />
         </nav>
     )
 }

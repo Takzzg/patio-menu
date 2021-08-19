@@ -289,7 +289,7 @@ const dataCarritos = [
                     precio: '$$$$',
                 },
                 {
-                    id: 0,
+                    id: 1,
                     nombre: 'Salsa 2',
                     foto: saporiDiFamigliaFotos.sorrentinos2,
                     desc: 'Descripcion salsa 2',

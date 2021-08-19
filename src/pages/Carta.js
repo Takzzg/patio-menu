@@ -1,6 +1,12 @@
 import React from 'react'
 import dataCarritos from '../dataCarritos'
-import { Banner, Category, Plato, SocialContainer } from '../components'
+import {
+    Banner,
+    Category,
+    Plato,
+    SocialContainer,
+    SearchBar,
+} from '../components'
 
 function Carta(props) {
     const { match } = props
@@ -17,15 +23,20 @@ function Carta(props) {
                 idFace={idFace}
                 numWpp={numWpp}
             />
-            <>
+            <SearchBar carr={carrito}>
                 {Object.keys(carta).map((cat) => (
                     <Category key={cat} nombre={cat}>
                         {carta[cat].map((plato) => {
-                            return <Plato key={plato.id} plato={plato} />
+                            return (
+                                <Plato
+                                    key={`${cat}-${plato.id}`}
+                                    plato={plato}
+                                />
+                            )
                         })}
                     </Category>
                 ))}
-            </>
+            </SearchBar>
         </div>
     )
 }
