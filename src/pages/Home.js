@@ -21,8 +21,10 @@ function Home() {
                 Vení a visitar los mejores Food Trucks de Merlo, en un sólo
                 lugar!
             </MainTitle>
-            <SubTitle>
+            <SubTitle lights table>
                 <Category nombre="El Patio te ofrece" />
+                <br />
+                <br />
                 <ul>
                     <li>
                         Variedad de comidas, que te trasladan a diferentes
