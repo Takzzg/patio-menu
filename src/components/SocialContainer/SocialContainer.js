@@ -4,7 +4,8 @@ import './SocialContainer.sass'
 
 function SocialContainer(props) {
     const { userInsta, idFace, numWpp } = props
-    return (
+
+    return userInsta || idFace || numWpp ? (
         <div
             className="socialContainer"
             style={{ backgroundImage: 'url(../images/wppBg.jpg)' }}
@@ -15,7 +16,7 @@ function SocialContainer(props) {
                 ? numWpp.map((num) => <SocialLink wapp key={num} link={num} />)
                 : null}
         </div>
-    )
+    ) : null
 }
 
 export default SocialContainer
