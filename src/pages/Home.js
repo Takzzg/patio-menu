@@ -9,6 +9,14 @@ import {
 import dataPatio from '../dataPatio'
 import './Home.sass'
 
+import Carousel, {
+    arrowsPlugin,
+    slidesToShowPlugin,
+} from '@brainhubeu/react-carousel'
+import '@brainhubeu/react-carousel/lib/style.css'
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
+import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft'
+
 function Home() {
     return (
         <div className="home">
@@ -46,7 +54,52 @@ function Home() {
                 un momento al aire libre con tu familia, amigos y hasta tus
                 mascotas!
             </SubTitle>
-            <p>Insertar galeria aqui</p>
+            <Carousel
+                plugins={[
+                    {
+                        resolve: arrowsPlugin,
+                        options: {
+                            arrowLeft: (
+                                <button>
+                                    <KeyboardArrowLeftIcon className="arrow" />
+                                </button>
+                            ),
+                            arrowLeftDisabled: (
+                                <button>
+                                    <KeyboardArrowLeftIcon className="arrow" />
+                                </button>
+                            ),
+                            arrowRight: (
+                                <button>
+                                    <KeyboardArrowRightIcon className="arrow" />
+                                </button>
+                            ),
+                            arrowRightDisabled: (
+                                <button>
+                                    <KeyboardArrowRightIcon className="arrow" />
+                                </button>
+                            ),
+                            addArrowClickHandler: true,
+                        },
+                    },
+                    'infinite',
+                    'fastSwipe',
+                ]}
+                className="carousel"
+            >
+                <img
+                    src="../images/carousel/carousel1.jpg"
+                    alt="carousel item 1"
+                />
+                <img
+                    src="../images/carousel/carousel2.jpg"
+                    alt="carousel item 2"
+                />
+                <img
+                    src="../images/carousel/carousel3.jpg"
+                    alt="carousel item 3"
+                />
+            </Carousel>
             <MainTitle text="Seguinos en nuestras redes sociales" />
             <SocialContainer
                 userInsta={dataPatio.userInsta}
