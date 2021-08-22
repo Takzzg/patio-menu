@@ -9,10 +9,7 @@ import {
 import dataPatio from '../dataPatio'
 import './Home.sass'
 
-import Carousel, {
-    arrowsPlugin,
-    slidesToShowPlugin,
-} from '@brainhubeu/react-carousel'
+import Carousel, { arrowsPlugin } from '@brainhubeu/react-carousel'
 import '@brainhubeu/react-carousel/lib/style.css'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft'
