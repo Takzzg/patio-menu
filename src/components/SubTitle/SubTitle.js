@@ -2,7 +2,7 @@ import React from 'react'
 import './SubTitle.sass'
 
 function SubTitle(props) {
-    const { text, lights, table, children } = props
+    const { lights, table, children } = props
     return (
         <div className="subTitle">
             {lights ? (
@@ -12,7 +12,7 @@ function SubTitle(props) {
                     alt="stringlights"
                 />
             ) : null}
-            {text ? text : children}
+            {children}
             {table ? (
                 <img
                     className="table-img"

@@ -10,11 +10,13 @@ function Carta(props) {
     return (
         <div className="carta">
             <Banner nombre={nombre} desc={desc} foto={foto} />
-            <SocialContainer
-                userInsta={userInsta}
-                idFace={idFace}
-                numWpp={numWpp}
-            />
+            {userInsta || idFace || numWpp ? (
+                <SocialContainer
+                    userInsta={userInsta}
+                    idFace={idFace}
+                    numWpp={numWpp}
+                />
+            ) : null}
             {Object.keys(carta).map((cat) => (
                 <Category key={cat} nombre={cat}>
                     {carta[cat].map((plato) => {

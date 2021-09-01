@@ -5,7 +5,7 @@ function Category(props) {
     const { nombre, children } = props
 
     const capitalized = (nombre) => {
-        var splitStr = nombre.toLowerCase().split('_')
+        let splitStr = nombre.toLowerCase().split('_')
         for (var i = 0; i < splitStr.length; i++) {
             splitStr[i] =
                 splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1)

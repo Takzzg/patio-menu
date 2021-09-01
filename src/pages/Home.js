@@ -48,15 +48,18 @@ function Home() {
                 mascotas!
             </SubTitle>
             <MyCarousel />
-            <MainTitle text="Seguinos en nuestras redes sociales" />
+            <MainTitle>Seguinos en nuestras redes sociales</MainTitle>
             <SocialContainer
                 userInsta={Patio.userInsta}
                 idFace={Patio.idFace}
                 numWpp={Patio.numWpp}
                 tripAd
             />
-            <MainTitle text="¿ Donde Encontrarnos ?" />
-            <SubTitle text="Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
+            <MainTitle>¿ Donde Encontrarnos ?</MainTitle>
+            <SubTitle>
+                Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos
+                Pellegrini), Merlo, San Luis.
+            </SubTitle>
             <iframe
                 title="map"
                 className="map"

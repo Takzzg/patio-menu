@@ -1,5 +1,5 @@
 import React from 'react'
-import { Overlay } from '../index'
+import Overlay from './Overlay/Overlay.js'
 import './BgImage.sass'
 const stockPhoto = '../images/carrito1.jpg'
 

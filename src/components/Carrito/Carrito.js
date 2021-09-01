@@ -1,13 +1,14 @@
 import React from 'react'
-import { BgImage } from '../index'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import { Link } from 'react-router-dom'
+import { BgImage } from '../index'
 import './Carrito.sass'
 import IndexCarritos from '../../dataCarritos/index.js'
 
 function Carrito(props) {
     const { carrId, noDesc, onClick } = props
     const { nombre, foto, desc } = IndexCarritos[carrId]
+
     return (
         <Link
             onClick={onClick}

@@ -1,11 +1,11 @@
 import React from 'react'
-import { SocialLink } from '../index'
+import SocialLink from './SocialLink/SocialLink.js'
 import './SocialContainer.sass'
 
 function SocialContainer(props) {
     const { userInsta, idFace, numWpp, tripAd } = props
 
-    return userInsta || idFace || numWpp ? (
+    return (
         <div
             className="socialContainer"
             style={{ backgroundImage: 'url(../images/wppBg.jpg)' }}
@@ -21,7 +21,7 @@ function SocialContainer(props) {
             </div>
             {tripAd ? <SocialLink tripAd /> : null}
         </div>
-    ) : null
+    )
 }
 
 export default SocialContainer
