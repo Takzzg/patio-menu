@@ -5,14 +5,10 @@ import {
     SocialContainer,
     Banner,
     Category,
+    MyCarousel,
 } from '../components'
-import dataPatio from '../dataPatio'
+import Patio from '../dataCarritos/Patio'
 import './Home.sass'
-
-import Carousel, { arrowsPlugin } from '@brainhubeu/react-carousel'
-import '@brainhubeu/react-carousel/lib/style.css'
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
-import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft'
 
 function Home() {
     return (
@@ -51,66 +47,16 @@ function Home() {
                 un momento al aire libre con tu familia, amigos y hasta tus
                 mascotas!
             </SubTitle>
-            <Carousel
-                plugins={[
-                    {
-                        resolve: arrowsPlugin,
-                        options: {
-                            arrowLeft: (
-                                <button>
-                                    <KeyboardArrowLeftIcon className="arrow" />
-                                </button>
-                            ),
-                            arrowLeftDisabled: (
-                                <button>
-                                    <KeyboardArrowLeftIcon className="arrow" />
-                                </button>
-                            ),
-                            arrowRight: (
-                                <button>
-                                    <KeyboardArrowRightIcon className="arrow" />
-                                </button>
-                            ),
-                            arrowRightDisabled: (
-                                <button>
-                                    <KeyboardArrowRightIcon className="arrow" />
-                                </button>
-                            ),
-                            addArrowClickHandler: true,
-                        },
-                    },
-                    'infinite',
-                    'fastSwipe',
-                ]}
-                className="carousel"
-            >
-                <img
-                    src="../images/carousel/carousel1.jpg"
-                    alt="carousel item 1"
-                />
-                <img
-                    src="../images/carousel/carousel2.jpg"
-                    alt="carousel item 2"
-                />
-                <img
-                    src="../images/carousel/carousel3.jpg"
-                    alt="carousel item 3"
-                />
-            </Carousel>
+            <MyCarousel />
             <MainTitle text="Seguinos en nuestras redes sociales" />
             <SocialContainer
-                userInsta={dataPatio.userInsta}
-                idFace={dataPatio.idFace}
-                numWpp={dataPatio.numWpp}
+                userInsta={Patio.userInsta}
+                idFace={Patio.idFace}
+                numWpp={Patio.numWpp}
                 tripAd
             />
             <MainTitle text="¿ Donde Encontrarnos ?" />
             <SubTitle text="Podes encontrarnos en: Av. del Sol 1043 (esquina calle Carlos Pellegrini), Merlo, San Luis." />
-            {/* <SocialContainer
-                userInsta={dataPatio.userInsta}
-                idFace={dataPatio.idFace}
-                numWpp={dataPatio.numWpp}
-            /> */}
             <iframe
                 title="map"
                 className="map"

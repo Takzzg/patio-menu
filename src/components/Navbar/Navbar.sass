@@ -3,18 +3,29 @@
 #navbar
     background-color: $background
     display: flex
-    align-items: center
     justify-content: space-around
-    position: sticky
     top: 0
     box-shadow: $boxShadow
     z-index: 10
 
+    > *
+        display: flex
+        align-items: center
+        padding: 10px
+        color: $lightTextBright
+
+    .icono
+        font-size: 35px
+
+    #searchIcon
+        color: $lightTextBright
+
+        &.active
+            color: $secondaryVariant
+
     a
         font-size: 30px
-        padding: 10px
         text-decoration: none
-        color: $lightTextBright
         border-bottom: 3px solid $background
 
         &.active

@@ -20,7 +20,7 @@ function Category(props) {
                 {capitalized(nombre)}
                 <hr />
             </div>
-            <div className="children">{children}</div>
+            {children}
         </div>
     )
 }

@@ -1,43 +1,50 @@
-import { Link, useLocation } from 'react-router-dom'
-import SearchIcon from '@material-ui/icons/Search'
-import { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded'
+import SearchRoundedIcon from '@material-ui/icons/SearchRounded'
+import { SearchBar } from '../index'
 import './Navbar.sass'
 
 function Navbar() {
-    let location = useLocation()
-    useEffect(() => {
-        if (location.pathname === '/')
-            document
-                .getElementById('navbar')
-                .getElementsByClassName('navbar-link')
-                .item(0)
-                .classList.add('active')
-        else
-            document
-                .getElementById('navbar')
-                .getElementsByClassName('navbar-link')
-                .item(1)
-                .classList.add('active')
-    })
-
-    const updateButton = (e) => {
-        let links = document
-            .getElementById('navbar')
-            .getElementsByClassName('navbar-link')
-        Array.from(links).forEach((link) => link.classList.remove('active'))
-        e.target.classList.add('active')
+    const toggleSearch = () => {
+        document.getElementById('results').classList.toggle('active')
+        document.getElementById('searchIcon').classList.toggle('active')
+        document.getElementById('searchInput').focus()
+    }
+    const closeSearch = () => {
+        document.getElementById('results').classList.remove('active')
+        document.getElementById('searchIcon').classList.remove('active')
     }
 
     return (
-        <nav id="navbar">
-            <Link onClick={updateButton} className="navbar-link" to="/">
-                Inicio
-            </Link>
-            <Link onClick={updateButton} className="navbar-link" to="/carritos">
-                Carritos
-            </Link>
-            <SearchIcon className="search" />
-        </nav>
+        <>
+            <nav id="navbar">
+                <NavLink
+                    activeClassName="active"
+                    className="navbar-link"
+                    to="/"
+                    exact
+                    onClick={closeSearch}
+                >
+                    <HomeRoundedIcon className="inicio icono" />
+                </NavLink>
+                <NavLink
+                    activeClassName="active"
+                    className="navbar-link"
+                    to="/carritos"
+                    onClick={closeSearch}
+                >
+                    <span className="carritos">Carritos</span>
+                </NavLink>
+                <span className="navbar-link">
+                    <SearchRoundedIcon
+                        className="icono"
+                        id="searchIcon"
+                        onClick={toggleSearch}
+                    />
+                </span>
+            </nav>
+            <SearchBar onNavigate={closeSearch} />
+        </>
     )
 }
 

@@ -1,20 +1,28 @@
 import React from 'react'
 import { BgImage } from '../index'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
+import { Link } from 'react-router-dom'
 import './Carrito.sass'
+import IndexCarritos from '../../dataCarritos/index.js'
 
 function Carrito(props) {
-    const { nombre, foto, desc } = props.carr
+    const { carrId, noDesc, onClick } = props
+    const { nombre, foto, desc } = IndexCarritos[carrId]
     return (
-        <div className="carrito">
+        <Link
+            onClick={onClick}
+            className="carrito"
+            key={carrId}
+            to={`/carritos/${carrId}`}
+        >
             <BgImage foto={foto} overlay>
                 <div className="grid">
                     <div className="nombre">{nombre}</div>
                     <NavigateNextIcon className="icon" />
-                    <div className="desc">{desc}</div>
+                    {noDesc ? null : <div className="desc">{desc}</div>}
                 </div>
             </BgImage>
-        </div>
+        </Link>
     )
 }
 

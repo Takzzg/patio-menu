@@ -1,38 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import dataCarritos from '../dataCarritos'
 import { Carrito, Category } from '../components'
 import './Carritos.sass'
+import { filterIds } from '../dataCarritos/index.js'
 
-const sortedCarritos = dataCarritos.sort((a, b) => {
-    return a.nombre.localeCompare(b.nombre)
-})
-const cerveceros = sortedCarritos
-    .filter((carr) => {
-        return carr.cerveceria
-    })
-    .map((carr) => (
-        <Link key={carr.id} to={`/carritos/${carr.nombre}`}>
-            <Carrito carr={carr} />
-        </Link>
-    ))
-const comida = sortedCarritos
-    .filter((carr) => {
-        return !carr.cerveceria
-    })
-    .map((carr) => (
-        <Link key={carr.id} to={`/carritos/${carr.nombre}`}>
-            <Carrito carr={carr} />
-        </Link>
-    ))
+const bebidas = filterIds('nombre', 'bebidas')
+const cerveceros = filterIds('cerveceria', true)
+const comida = filterIds('cerveceria', undefined)
+const mapCarritos = (carrs) =>
+    carrs.map((carrId) => <Carrito key={carrId} carrId={carrId} />)
 
 function Carritos() {
     return (
         <div className="contenedor-carritos">
+            <Category nombre="Bebidas" />
+            {mapCarritos(bebidas)}
             <Category nombre="Cerveza" />
-            {cerveceros}
+            {mapCarritos(cerveceros)}
             <Category nombre="Comidas" />
-            {comida}
+            {mapCarritos(comida)}
         </div>
     )
 }

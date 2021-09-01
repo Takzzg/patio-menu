@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { Category, Plato } from '../index'
-import SearchIcon from '@material-ui/icons/Search'
+import { Carrito, Category, Plato } from '../index'
 import './SearchBar.sass'
+import IndexCarritos from '../../dataCarritos/index.js'
 
 function SearchBar(props) {
-    const { carr, children } = props
+    const { onNavigate } = props
     const [input, setInput] = useState('')
     const [matches, setMatches] = useState({})
 
@@ -12,19 +12,23 @@ function SearchBar(props) {
         let tempMatches = {}
         setInput(inputValue)
         if (inputValue !== '') {
-            for (let cat in carr.carta) {
-                for (let plato in carr.carta[cat]) {
-                    if (
-                        carr.carta[cat][plato].nombre
-                            .toUpperCase()
-                            .includes(inputValue.toUpperCase()) ||
-                        carr.carta[cat][plato].desc
-                            .toUpperCase()
-                            .includes(inputValue.toUpperCase())
-                    ) {
-                        if (!tempMatches.hasOwnProperty(cat))
-                            tempMatches[cat] = []
-                        tempMatches[cat].push(carr.carta[cat][plato])
+            for (let carr in IndexCarritos) {
+                for (let cat in IndexCarritos[carr].carta) {
+                    for (let plato of IndexCarritos[carr].carta[cat]) {
+                        if (
+                            plato.nombre
+                                .toUpperCase()
+                                .includes(inputValue.toUpperCase()) ||
+                            plato.desc
+                                .toUpperCase()
+                                .includes(inputValue.toUpperCase())
+                        ) {
+                            if (!tempMatches.hasOwnProperty(carr))
+                                tempMatches[carr] = {}
+                            if (!tempMatches[carr].hasOwnProperty(cat))
+                                tempMatches[carr][cat] = []
+                            tempMatches[carr][cat].push(plato)
+                        }
                     }
                 }
             }
@@ -34,30 +38,41 @@ function SearchBar(props) {
 
     return (
         <div className="search-container">
-            <div className="search-bar">
-                <SearchIcon />
+            <div id="results">
                 <input
-                    onChange={(event) => handleChange(event.target.value)}
+                    id="searchInput"
+                    onChange={(e) => handleChange(e.target.value)}
                     value={input}
-                    className="icon"
                     type="text"
                     placeholder="Buscar..."
                 />
-            </div>
-            {Object.keys(matches).length > 0 ? (
-                Object.keys(matches).map((cat) => (
-                    <Category key={cat} nombre={cat}>
-                        {matches[cat].map((plato) => (
-                            <Plato key={`${cat}-${plato.id}`} plato={plato} />
-                        ))}
-                    </Category>
-                ))
-            ) : (
-                <>
+                {Object.keys(matches).length > 0 ? (
+                    Object.keys(matches).map((carr) => (
+                        <>
+                            <Carrito
+                                onClick={onNavigate}
+                                noDesc
+                                key={carr}
+                                carrId={carr}
+                            />
+                            {Object.keys(matches[carr]).map((cat) => (
+                                <Category key={cat} nombre={cat}>
+                                    {matches[carr][cat].map((plato) => {
+                                        return (
+                                            <Plato
+                                                key={`${cat}-${plato.id}`}
+                                                plato={plato}
+                                            />
+                                        )
+                                    })}
+                                </Category>
+                            ))}
+                        </>
+                    ))
+                ) : input !== '' ? (
                     <p>No se encontraron resultados para la busqueda</p>
-                    {children}
-                </>
-            )}
+                ) : null}
+            </div>
         </div>
     )
 }
